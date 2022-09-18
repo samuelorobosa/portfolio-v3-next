@@ -1,4 +1,4 @@
-import {FiGithub, FiLinkedin, FiMail, FiTwitter} from "react-icons/fi";
+import {FiGithub, FiLinkedin, FiAtSign, FiTwitter} from "react-icons/fi";
 
 export  const socialsData = [
     {
@@ -23,7 +23,7 @@ export  const socialsData = [
         id: 4,
         name: 'GM',
         url: 'mailto:amagbakhensamuel@gmail.com',
-        icon: <FiMail />,
+        icon: <FiAtSign />,
     },
 
 ]
