@@ -45,7 +45,7 @@ function Navbar (){
                         return(
                             <Link key={id} href={`${url}`}
                                   aria-current="page">
-                                <a className={pathName === url ? 'active' : ''}>
+                                <a className={pathName === url ? styles.active : ''}>
                                     <span className={styles.pv3__navBottomIcon}>{icon}</span>
                                     <span className={styles.pv3__navBottomText}>{name}</span>
                                 </a>
