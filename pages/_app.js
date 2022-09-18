@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react';
 import Loader from "../components/Loader";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
     const router = useRouter();
@@ -41,6 +42,9 @@ function MyApp({ Component, pageProps }) {
 
     return(
       <>
+          <Head>
+              <meta name="viewport" content="width=device-width, initial-scale=1"/>
+          </Head>
           <Loader isRouteChanging={state.isRouteChanging} key={state.loadingKey} />
           <ArticlesContextProvider>
               <NavigationProvider>
