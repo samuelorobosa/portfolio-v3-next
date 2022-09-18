@@ -42,7 +42,7 @@ export default function Articles ({articles}) {
             </Head>
             <div className="container mx-auto flex flex-col">
                 <h1 className="font-semibold text-2xl  text-center secondary-text-color mb-5">{pathName}</h1>
-                <h1 className="text-3xl font-extrabold text-center">
+                <h1 className="text-5xl font-extrabold text-center">
                     <span className="stand-out-color text-base inline-block mr-3">04.</span>
                     My Articles
                 </h1>

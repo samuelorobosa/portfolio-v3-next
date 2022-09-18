@@ -45,22 +45,7 @@ export default function Home() {
                   </a>
               </Link>
           </div>
-          <div className="mt-3 md:mt-auto mb-14 md:flex hidden justify-between items-center">
-
-              {/*<div className="social-media-icons flex flex-nowrap font-extrabold">*/}
-              {/*    {socialsData.map(social => (*/}
-              {/*        <a className="px-3 flex flex-nowrap items-center hover-secondary-text-color transition duration-500 ease-in-out"*/}
-              {/*              href={social.url}*/}
-              {/*              key={social.id}*/}
-              {/*              target="_blank"*/}
-              {/*              rel="noopener noreferrer">*/}
-              {/*            {social.icon}&nbsp;&nbsp;{social.name} &nbsp;*/}
-              {/*            <BsArrowUpRight className="inline"/>*/}
-              {/*        </a>*/}
-              {/*    ))*/}
-              {/*    }*/}
-              {/*</div>*/}
-          </div>
+          <div className="mt-3 md:mt-auto mb-14 md:flex hidden justify-between items-center"></div>
           <div className="pb-24 sm:pb-0"></div>
     </>
   )
