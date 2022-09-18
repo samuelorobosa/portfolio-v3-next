@@ -48,7 +48,6 @@ export default function Articles ({articles}) {
                 </h1>
 
                 <div className={`mt-5 w-11/12 sm:w-3/4 mx-auto ${styles.pv3__articlesContainer}`}>
-                    <div className={`${styles.articlesDivContainer} px-5 md:px-24 mt-5 pb-44`}>
                         {
                                 <>
                                     {
@@ -77,7 +76,6 @@ export default function Articles ({articles}) {
                                 </>
                         }
                     </div>
-                </div>
 
                 <div className="pb-24 sm:pb-0"></div>
             </div>

@@ -5,6 +5,7 @@ import {resumeData} from "../../data/Resume/resumeData";
 import {useRouter} from "next/router";
 import Head from "next/head";
 import Link from "next/link";
+import styles from '../../styles/Resume.module.scss';
 
 function Resume (){
     const location = useRouter().pathname
@@ -29,7 +30,7 @@ function Resume (){
                 Take A Peek At My Resume
             </h1>
 
-            <div className="resume-container p-5 mt-10  w-11/12 md:w-1/2 mx-auto flex flex-col bg-main-color rounded">
+            <div className={`p-5 mt-10  w-11/12 md:w-1/2 mx-auto flex flex-col bg-main-color rounded`}>
                 <div className="top_row flex justify-between items-stretch">
                     <h1 className="text-2xl font-semibold">{`${name} ${surname}`}</h1>
                     <a href={'/docs/Resume.pdf'} target="_blank" rel="noreferrer" className="stand-out-color flex items-center">Download&nbsp;<ImDownload /></a>
@@ -42,7 +43,7 @@ function Resume (){
                     toolsData.map(({title, data}, index)=>{
                         return(
                             <div key={index}>
-                                <div className="divider">
+                                <div className={styles.divider}>
                                     <div className="font-bold secondary-text-color-lighter mr-1">{title}</div>
                                     <span/>
                                 </div>

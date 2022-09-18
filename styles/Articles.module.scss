@@ -7,7 +7,7 @@
 }
 
 .articlesDiv{
-  min-height: 200px;
+  min-height: 250px;
   transition: all 0.5s;
   opacity: 1;
 }
@@ -23,5 +23,11 @@
 @media(hover: hover){
   .articlesDiv:hover{
     transform: scale(1.05);
+  }
+}
+
+@media (max-width: 768px) {
+  .pv3__articlesContainer{
+    grid-template-columns: 100%;
   }
 }
