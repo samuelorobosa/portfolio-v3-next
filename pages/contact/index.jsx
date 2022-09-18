@@ -36,9 +36,9 @@ export default function Contact (){
                         across. {`I'll`} get back to you ASAP.
                     </p>
                 </div>
-                <div className="text-center text-xl py-5 px-12 mt-6">
+                <div className="text-center text-xl py-6 px-16 mt-6">
                     <Link href={'mailto:amagbakhensamuel@email.com'}>
-                        <a className="px-3 transition duration-500 hover:bg-blue-600 hover:text-white border border-standout-color py-5 px-12 stand-out-color rounded font-bold">
+                        <a className="px-3 transition duration-500 hover:bg-blue-600 hover:text-white border border-standout-color  py-6 px-16 stand-out-color rounded font-bold">
                             Say Hello
                         </a>
                     </Link>
