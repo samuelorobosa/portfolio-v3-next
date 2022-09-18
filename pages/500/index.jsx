@@ -20,4 +20,4 @@ function Custom500 () {
     )
 }
 
-export default Custom404;
+export default Custom500;
