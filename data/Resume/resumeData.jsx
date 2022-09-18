@@ -2,17 +2,17 @@ export const resumeData = {
         name: "Samuel",
         surname: "Amagbakhen",
         role: "Frontend Developer",
-        description: "A creative, ambitious, and self-motivated frontend developer with a passion for creating things that live and breathe on the web. I can work with popular front-end technologies, utilizing and these tools to deliver a pixel-perfect design and user-centered implementation with proper documentation of my implementation.",
+        description: "A frontend developer developing and maintaining applications on the web. I help companies translate their business requirements into technical specifications using modern web technologies. I have experience in building efficient, clean and scalable web applications. Currently, I'm exploring the backend facing side of web applications using Laravel and PHP.",
         toolsData: [
             {
                 id: 0,
                 title: "Core Technologies",
-                data: ["HTML", "CSS/SCSS", "JavaScript(ES6)", "TypeScript", "PHP", "MySQL"]
+                data: ["HTML", "CSS/SCSS", "JavaScript(ES6+)", "TypeScript", "PHP", "MySQL"]
             },
             {
                 id: 1,
                 title: "Libraries and Frameworks",
-                data: ["Bootstrap", "ReactJS", "jQuery", "TailwindCSS", "Laravel", "React Query", "GSAP"]
+                data: ["Bootstrap", "ReactJS", "jQuery", "TailwindCSS", "Laravel", "React Query", "GSAP", "CSS-in-JS", "CSS/SCSS Modules"]
             },
             {
                 id: 2,
@@ -24,29 +24,45 @@ export const resumeData = {
                 title: "Design",
                 data: ["Figma","InVision"]
             },
+            {
+                id: 4,
+                title: "Others",
+                data: ["Responsive Web Design", "Google Search", "Accessibility", "Time Management", "Technical Writing & Documentation", "Communication", "Leadership"]
+            },
         ],
         experience: [
             {
-                jobTitle: "Director of Media & Comms.",
+                jobTitle: "Director of Media & Communications",
                 company: "Junior Chamber International",
                 startDate: "May 2020",
                 endDate:  "", //leave blank if still working
                 workDone: [
-                    "Draft and design user interface structures",
-                    "Test and evaluate new programs ensuring optimal performance and runtime speed",
+                    "Worked with the design team to build the JCIN UNIBEN web application increasing brand visibility by more than 50%",
+                    "Prepared reports on programming project specifications, activities, and status and documentation to guide incoming developers",
                     "Modify the software to fix errors and improve its performance",
                     "Deploy software tools, processes, and metrics",
                     "Prepare reports on programming project specifications, activities, and status",
                 ]
             },
             {
-                jobTitle: "Frontend Developer",
+                jobTitle: "Frontend Developer[Intern]",
                 company: "Edo State Skills Development Agency",
                 startDate: "May 2021",
                 endDate:  "July 2021", //leave blank if still working
                 workDone: [
                     "I designed and implemented user interfaces for promotional web pages for Edo Virtual Fair, a program designed to connect Edo indigenes with job offers from interested companies",
-                    "Collaborated with a team of designers and developers converted design mockups into code for additional pages to the EdoJobs website",
+                    "I collaborated with a team of designers and developers to convert design mockups into code for additional pages on the EdoJobs website",
+                ]
+            },
+            {
+                jobTitle: "Frontend Developer[Intern]",
+                company: "Edo State Skills Development Agency",
+                startDate: "May 2020",
+                endDate:  "August 2020", //leave blank if still working
+                workDone: [
+                    "I developed and maintained code for in-house web applications primarily using HTML, CSS, Laravel Blade Templates, and JavaScript",
+                    "I implemented responsive web templates from Figma wireframes for sale on the Envato market",
+                    "I tested pages in various browsers and devices ensuring responsiveness and cross-browser compatibility",
                 ]
             },
         ]

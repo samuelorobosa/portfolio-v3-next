@@ -61,7 +61,7 @@ function Resume (){
                         )
                     })
                 }
-                <div className="divider">
+                <div className={styles.divider}>
                     <p className="font-bold secondary-text-color-lighter mr-1">Work Experience</p>
                     <span/>
                 </div>
@@ -80,7 +80,7 @@ function Resume (){
                                         return(
                                             <div key={index} className="work flex my-1">
                                                 <span>■</span>
-                                                <span className="w-1/12"/>
+                                                 &nbsp;&nbsp;
                                                 {item}.
                                             </div>
                                         )
@@ -91,15 +91,15 @@ function Resume (){
                         )
                     })}
                 </div>
-                <div className="divider">
+                <div className={styles.divider}>
                     <p className="font-bold secondary-text-color-lighter mr-1">Projects</p>
                     <span/>
                 </div>
                 <p className="work flex my-1">
                     <span>■</span>
-                    <span className="w-1/12"/>
+                    &nbsp;&nbsp;
                     <span>
-                       Links to my works can be found on <Link className="stand-out-color hover-secondary-text-color-lighter" href="/projects">samuelorobosa.me/projects </Link>
+                       Links to my works can be found on <Link className="stand-out-color hover-secondary-text-color-lighter" href="/projects">samuelorobosa.xyz/projects </Link>
                        and more details can be provided upon request.
                    </span>
 
