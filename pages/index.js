@@ -35,12 +35,12 @@ export default function Home() {
               </p>
           </div>
           <div className="mt-0 sm:mt-8 container mx-auto">
-              <Link href={'/projects'} className={`text-2xl hover-secondary-text-color inline-block
+              <Link href={'/projects'}>
+                  <a className={`text-2xl hover-secondary-text-color inline-block
                   font-extrabold after:content-[''] after:w-20
                   after:block after:h-0.5 after:bg-white ${styles.pv3__viewMyProjects}
                   transition duration-500 ease-in-out
                   after:transition-all after:delay-300`}>
-                  <a>
                       View My Projects&nbsp;<BsArrowRight className={`inline ${styles.pv3__viewMyProjectsIcon}`}/>
                   </a>
               </Link>

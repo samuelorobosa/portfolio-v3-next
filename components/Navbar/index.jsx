@@ -25,8 +25,10 @@ function Navbar (){
                                         <li key={id}
                                             className={pathName === url ? 'hidden' : 'list-item'}>
                                             <Link href={`${url}`}
-                                                  className={`${styles.nav_links} after:transition-all after:delay-300 font-circular-medium`}
-                                                  aria-current="page">{name}
+                                                  aria-current="page">
+                                                <a className={`${styles.nav_links} after:transition-all after:delay-300 font-circular-medium`}>
+                                                    {name}
+                                                </a>
                                             </Link>
                                         </li>
                                     )
@@ -42,9 +44,8 @@ function Navbar (){
                     navData.map(({name, id, url, icon})=>{
                         return(
                             <Link key={id} href={`${url}`}
-                                  className={pathName === url ? 'active' : ''}
                                   aria-current="page">
-                                <a>
+                                <a className={pathName === url ? 'active' : ''}>
                                     <span className={styles.pv3__navBottomIcon}>{icon}</span>
                                     <span className={styles.pv3__navBottomText}>{name}</span>
                                 </a>
