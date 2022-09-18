@@ -11,8 +11,7 @@ function Navbar (){
             <nav className="container mx-auto bg-main-color py-10 dark:bg-gray-800">
                 <div className="flex flex-wrap justify-between items-center">
                     <Link href={'/'} className="flex items-center">
-                        <span
-                            className="self-center text-5xl font-bold whitespace-nowrap dark:text-white">
+                        <span className="self-center text-5xl cursor-pointer font-bold whitespace-nowrap dark:text-white">
                             SA.
                         </span>
                     </Link>
