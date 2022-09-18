@@ -1,4 +1,4 @@
-# Samuel's Portfolio Site. [https://samuelorobosa.me/](https://samuelorobosa.me/)
+# Samuel's Portfolio Site. [https://samuelorobosa.xyz/](https://samuelorobosa.xyz/)
 
 This project was built with Next JS.
 
