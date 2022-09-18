@@ -33,7 +33,7 @@ function Resume (){
             <div className={`p-5 mt-10  w-11/12 md:w-1/2 mx-auto flex flex-col bg-main-color rounded`}>
                 <div className="top_row flex justify-between items-stretch">
                     <h1 className="text-2xl font-semibold">{`${name} ${surname}`}</h1>
-                    <a href={'/docs/Resume.pdf'} target="_blank" rel="noreferrer" className="stand-out-color flex items-center">Download&nbsp;<ImDownload /></a>
+                    <a href={'/docs/Samuel-Amagbakhen-Resume.pdf'} target="_blank" rel="noreferrer" className="stand-out-color flex items-center">Download&nbsp;<ImDownload /></a>
                 </div>
                 <h2 className="text-base stand-out-color">{role}</h2>
                 <div className="flex my-7">
