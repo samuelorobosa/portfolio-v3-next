@@ -1,0 +1,27 @@
+.pv3__articlesContainer{
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 1rem;
+}
+
+.articlesDiv{
+  min-height: 200px;
+  transition: all 0.5s;
+  opacity: 1;
+}
+
+.articlesDivContainer {
+  display: grid;
+  column-gap: 0.6rem;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  justify-items: center;
+}
+
+@media(hover: hover){
+  .articlesDiv:hover{
+    transform: scale(1.05);
+  }
+}

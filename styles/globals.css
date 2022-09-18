@@ -5,8 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body, html #root{
+body, html #__next{
     height: 100vh;
     display: flex;
     flex-direction: column;

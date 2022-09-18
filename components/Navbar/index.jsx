@@ -1,8 +1,11 @@
 import styles from './Navbar.module.scss';
 import Link from "next/link";
 import {navData} from "../../data/Home/navData";
+import {useContext} from "react";
+import NavigationContext from "../../context/NavigationContext/NavigationContext";
 
-function Navbar ({pathName}){
+function Navbar (){
+    const{pathName} = useContext(NavigationContext);
     return(
         <>
             <nav className="container mx-auto bg-main-color py-10 dark:bg-gray-800">

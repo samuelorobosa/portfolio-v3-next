@@ -1,0 +1,11 @@
+.projectDiv{
+  min-height: 320px;
+  width: 100%;
+}
+.pv3__projectsContainer{
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 1rem;
+}
