@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.scss';
 import {useContext, useEffect} from "react";
 import NavigationContext from "../context/NavigationContext/NavigationContext";
 import {useRouter} from "next/router";
+// import {motion} from "framer-motion";
 
 export default function Home() {
     const location = useRouter().pathname
