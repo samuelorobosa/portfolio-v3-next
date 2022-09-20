@@ -4,6 +4,8 @@
     --secondary-text-color: #424861;
     --secondary-text-color-lighter: #6b7292;
     --standout-color: #2667FF;
+    --color-light-purple: #cf59e6;
+    --color-light-blue: #6bc5f8;
 }
 
 .main-color {
@@ -61,3 +63,4 @@
 .hover-stand-out-color:hover {
      color: var(--standout-color);
  }
+

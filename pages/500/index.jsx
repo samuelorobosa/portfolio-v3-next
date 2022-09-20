@@ -5,7 +5,7 @@ function Custom500 () {
         <div className="text-center mt-12 py-9">
             <h1 className="text-8xl font-extrabold mb-9">Oops!</h1>
             <p className="font-mono">
-                {`Something's`} went wrong with this page.
+                Something went wrong with this page.
             </p>
             <p className="font-mono mb-9">
                Have a cup of coffee and it will be fixed in a bit.

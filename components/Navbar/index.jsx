@@ -8,7 +8,7 @@ function Navbar (){
     const{pathName} = useContext(NavigationContext);
     return(
         <>
-            <nav className="container mx-auto bg-main-color py-10 dark:bg-gray-800">
+            <nav className="container mx-auto bg-main-color py-10">
                 <div className="flex flex-wrap justify-between items-center">
                     <Link href={'/'} className="flex items-center">
                         <span className="self-center text-5xl cursor-pointer font-bold whitespace-nowrap dark:text-white">

@@ -24,7 +24,7 @@ export default function Contact (){
             <div className="container mx-auto flex flex-col h-5/6 justify-between">
                 <div>
                     <h1 className="font-semibold text-2xl  text-center secondary-text-color mb-5">{pathName}</h1>
-                    <h2 className="text-5xl font-extrabold text-center">
+                    <h2 className="text-4xl font-extrabold text-center">
                         <span className="stand-out-color text-base inline-block mr-3">05.</span>
                         {`Let's`} Have A Talk
                     </h2>
@@ -36,16 +36,16 @@ export default function Contact (){
                         across. {`I'll`} get back to you ASAP.
                     </p>
                 </div>
-                <div className="text-center text-xl py-6 px-16 mt-6">
+                <div className="text-center text-xl py-4 px-20 mt-6">
                     <Link href={'mailto:amagbakhensamuel@email.com'}>
-                        <a className="px-3 transition duration-500 hover:bg-blue-600 hover:text-white border border-standout-color  py-6 px-16 stand-out-color rounded font-bold">
+                        <a className="px-3 transition duration-500 hover:bg-blue-600 hover:text-white border border-standout-color  py-4 px-20 stand-out-color rounded font-bold">
                             Say Hello
                         </a>
                     </Link>
                 </div>
-                <div className="mt-3 md:mt-auto mb-14 flex justify-center md:justify-between items-center">
-                    <p className="text-2xl font-bold hidden md:flex">Connect with me online</p>
-                    <div className="flex flex-nowrap font-extrabold">
+                <div className="mt-3 md:mt-auto mb-14 flex justify-center flex-col md:flex-row md:justify-between items-center">
+                    <p className={`text-2xl font-bold flex my-3`}>Connect with me online</p>
+                    <div className="flex flex-nowrap font-extrabold my-3">
                         {socialsData.map(social => (
                             <a className="px-3 flex flex-nowrap items-center hover-secondary-text-color transition duration-500 ease-in-out"
                                   href={social.url}
