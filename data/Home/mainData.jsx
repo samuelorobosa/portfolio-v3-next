@@ -6,17 +6,27 @@ export const mainData = [
     },
     {
         id: 1,
-        content: 'there',
+        content: 'there,',
         className: ''
     },
     {
         id: 2,
-        content: 'this is',
+        content: 'this',
+        className: ''
+    },
+    {
+        id: 2.1,
+        content: 'is',
         className: ''
     },
     {
         id: 3,
-        content: 'Samuel Amagbakhen.',
+        content: 'Samuel',
+        className: `pv3__HomeGradientText`
+    },
+    {
+        id: 3.1,
+        content: 'Amagbakhen',
         className: `pv3__HomeGradientText`
     }
 ]

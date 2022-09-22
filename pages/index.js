@@ -35,13 +35,13 @@ export default function Home() {
                   {
                       mainData.map(({id, content, className}) => {
                           return(
-                              content === 'there' ?
+                              content === 'there,' ?
                               <Fragment key={id}>
-                                  <motion.span variants={textItem} className={`inline-block leading-none ${styles[className]}`}>{content}&nbsp;</motion.span> <br/>
+                                  <motion.span variants={textItem} className={`inline-flex leading-none ${styles[className]}`}>{content}&nbsp;</motion.span> <br/>
                               </Fragment>
                                :
                               <Fragment key={id}>
-                                  <motion.span variants={textItem}  className={`inline-block leading-none ${styles[className]}`}>{content}&nbsp;</motion.span>
+                                  <motion.span variants={textItem}  className={`inline-flex leading-none ${styles[className]}`}>{content}&nbsp;</motion.span>
                               </Fragment>
                           )})
                   }
