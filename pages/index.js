@@ -1,3 +1,4 @@
+import React,{Fragment} from "react";
 import Head from 'next/head';
 import {BsArrowRight} from "react-icons/bs";
 import Link from 'next/link';
@@ -5,7 +6,9 @@ import styles from '../styles/Home.module.scss';
 import {useContext, useEffect} from "react";
 import NavigationContext from "../context/NavigationContext/NavigationContext";
 import {useRouter} from "next/router";
-// import {motion} from "framer-motion";
+import {bottomMainData, mainData, subMainData} from "../data/Home/mainData";
+import {motion} from "framer-motion";
+import {container, textItem} from "../styles/animations/HomeAnimations";
 
 export default function Home() {
     const location = useRouter().pathname
@@ -17,6 +20,9 @@ export default function Home() {
             payload: location
         })
     },[dispatch, location])
+
+
+
   return (
     <>
           <Head>
@@ -25,15 +31,41 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico"/>
           </Head>
           <div className="flex-1 flex flex-col justify-center container mx-auto w-full mx-auto text-left md:text-center p-3">
-              <p className="text-5xl font-black font-circular-black">
-                  Hey there, <br/> this is <span className={styles.pv3__HomeGradientText}>Samuel Amagbakhen.</span></p>
-              <p className="w-full md:mx-auto lg:w-1/2 mt-3 leading-10 text-xl mt-8">
-                  A <span className="inline-block bg-secondary-text-color text-white rounded  px-1.5">frontend developer</span> developing and maintaining applications on the web.
-                  I help companies translate their business requirements into technical specifications using modern web technologies. I have experience in building efficient, clean and scalable web applications.
-              </p>
-              <p className="w-full md:mx-auto lg:w-1/2 mt-3 leading-10 text-xl mt-3">
-                  Currently, {`I'm`} exploring the backend facing side of web applications using Laravel and PHP.
-              </p>
+              <motion.p variants={container} initial="hidden" animate="visible" className="text-5xl font-black font-circular-black">
+                  {
+                      mainData.map(({id, content, className}) => {
+                          return(
+                              content === 'there' ?
+                              <Fragment key={id}>
+                                  <motion.span variants={textItem} className={`inline-block leading-none ${styles[className]}`}>{content}&nbsp;</motion.span> <br/>
+                              </Fragment>
+                               :
+                              <Fragment key={id}>
+                                  <motion.span variants={textItem}  className={`inline-block leading-none ${styles[className]}`}>{content}&nbsp;</motion.span>
+                              </Fragment>
+                          )})
+                  }
+              </motion.p>
+              <motion.p variants={container} initial="hidden" animate="visible" className="w-full md:mx-auto lg:w-1/2 mt-3 leading-10 text-xl mt-8">
+                  {
+                      subMainData.map(({id, content, className}) => {
+                          return(
+                              <Fragment key={id}>
+                                  <motion.span variants={textItem} className={`h-0.5 leading-none inline-block ${className}`}>{content} </motion.span>&nbsp;
+                              </Fragment>
+                          )})
+                  }
+              </motion.p>
+              <motion.p variants={container} initial="hidden" animate="visible" className="w-full md:mx-auto lg:w-1/2 mt-3 leading-10 text-xl mt-3">
+                  {
+                      bottomMainData.map(({id, content, className}) => {
+                          return(
+                              <Fragment key={id}>
+                                  <motion.span variants={textItem} className="h-0.5 leading-none inline-block">{content} </motion.span>&nbsp;
+                              </Fragment>
+                          )})
+                  }
+              </motion.p>
           </div>
           <div className="mt-0 sm:mt-8 container mx-auto">
               <Link href={'/projects'}>

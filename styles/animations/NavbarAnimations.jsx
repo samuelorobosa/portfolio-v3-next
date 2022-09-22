@@ -7,10 +7,10 @@ export const listContainer = {
         opacity: 1,
         y : 0,
         transition: {
-            delay: 0.1,
+            delay: 0.3,
             type: "spring",
-            duration: 0.2,
-            staggerChildren: 0.1,
+            duration: 0.3,
+            staggerChildren: 0.2,
             stiffness: 300,
 
         }
