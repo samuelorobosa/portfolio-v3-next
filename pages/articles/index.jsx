@@ -3,6 +3,7 @@ import NavigationContext from "../../context/NavigationContext/NavigationContext
 import {useRouter} from "next/router";
 import Head from "next/head";
 import {BsFillEyeFill} from "react-icons/bs";
+import {motion} from "framer-motion";
 import styles from "../../styles/Articles.module.scss"
 
 
@@ -40,7 +41,13 @@ export default function Articles ({articles}) {
             <Head>
                 <title>Articles | Samuel - Frontend Developer</title>
             </Head>
-            <div className="container mx-auto flex flex-col">
+            <motion.div
+                initial={{opacity: 0, y: 100}}
+                animate={{opacity: 1, y: 0}}
+                transition={{
+                    duration: 0.7,
+                }}
+                className="container mx-auto flex flex-col">
                 <h1 className="font-semibold text-2xl  text-center secondary-text-color mb-5">{pathName}</h1>
                 <h1 className="text-4xl font-extrabold text-center">
                     <span className="stand-out-color text-base inline-block mr-3">04.</span>
@@ -78,7 +85,7 @@ export default function Articles ({articles}) {
                     </div>
 
                 <div className="pb-24 sm:pb-0"></div>
-            </div>
+            </motion.div>
         </>
     )
 }

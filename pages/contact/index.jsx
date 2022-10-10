@@ -5,6 +5,7 @@ import Head from "next/head";
 import Link from "next/link";
 import {socialsData} from "../../data/Contact/socialsData";
 import {BsArrowUpRight} from "react-icons/bs";
+import {motion} from "framer-motion";
 
 export default function Contact (){
     const location = useRouter().pathname
@@ -21,7 +22,13 @@ export default function Contact (){
             <Head>
                 <title>Contact | Samuel - Frontend Developer</title>
             </Head>
-            <div className="container mx-auto flex flex-col h-5/6 justify-between">
+            <motion.div
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{
+                    duration: 0.7,
+                }}
+                className="container mx-auto flex flex-col h-5/6 justify-between">
                 <div>
                     <h1 className="font-semibold text-2xl  text-center secondary-text-color mb-5">{pathName}</h1>
                     <h2 className="text-4xl font-extrabold text-center">
@@ -59,7 +66,7 @@ export default function Contact (){
                         }
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
     )
 }
