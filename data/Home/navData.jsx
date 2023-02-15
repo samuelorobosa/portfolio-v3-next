@@ -16,12 +16,6 @@ export const navData = [
         icon: <IoBriefcaseOutline/>
     },
     {
-        id: 2,
-        name: 'Resume',
-        url: '/resume',
-        icon: <IoNewspaperOutline/>
-    },
-    {
         id: 3,
         name: 'Articles',
         url: '/articles',

@@ -3,7 +3,7 @@ export const projectsData = [
         id: 1,
         title: "AcademyStack",
         description: "A private boutique of dedicated artisans.",
-        techUsed: "Vanilla JavaScript, SCSS, Blade Templates",
+        techUsed: "Vanilla JavaScript, SCSS, Blade Templates, Webpack",
         gitHubLink: null,
         liveLink: "https://academystack.com/",
     },
