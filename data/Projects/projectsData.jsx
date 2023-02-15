@@ -1,14 +1,22 @@
 export const projectsData = [
     {
         id: 1,
+        title: "AcademyStack",
+        description: "A private boutique of dedicated artisans.",
+        techUsed: "Vanilla JavaScript, SCSS, Blade Templates",
+        gitHubLink: null,
+        liveLink: "https://academystack.com/",
+    },
+    {
+        id: 2,
         title: "Cordum",
         description: "Cordum is a web application that enables user take notes in rich text and label them according to their respective categories.",
-        techUsed: "ReactJs, PHP Laravel, MySQL, React Query, TypeScript",
+        techUsed: "ReactJs + React Query, TypeScript",
         gitHubLink: "https://github.com/samuelorobosa/cordum-frontend",
         liveLink: "https://cordum.vercel.app/",
     },
     {
-        id: 2,
+        id: 3,
         title: "Niffy's Marketplace",
         description: "An NFT Landing Page.",
         techUsed: "ReactJs, TailwindCSS, SCSS, GSAP, Vercel",
@@ -16,7 +24,7 @@ export const projectsData = [
         liveLink: "https://niffys-marketplace.vercel.app/",
     },
     {
-        id: 3,
+        id: 4,
         title: "SamuelOrobosa",
         description: "My Personal Website.",
         techUsed: "NextJS, TailwindCSS, Framer Motion",
@@ -24,7 +32,7 @@ export const projectsData = [
         liveLink: "https://samuelorobosa.xyz/",
     },
     {
-        id: 4,
+        id: 5,
         title: "GitHub Profile Overview",
         description: "GitHub Profile Search UI and Functionality.",
         techUsed: "HTML5/CSS3/JavaScript, Bootstrap, GitHub API",
@@ -33,7 +41,7 @@ export const projectsData = [
     },
 
     {
-        id: 5,
+        id: 6,
         title: "Continent Search",
         description: "Continents and Countries Search UI and Functionality.",
         techUsed: "HTML5/CSS3/JavaScript, Bootstrap, Open Country API",
@@ -42,7 +50,7 @@ export const projectsData = [
     },
 
     {
-        id: 6,
+        id: 7,
         title: "Orna's Form",
         description: "Form UI template with error placeholders, validation, alerts and smooth animations.",
         techUsed: "HTML5/CSS3/JavaScript, jQuery, Parsley.js",
@@ -51,7 +59,7 @@ export const projectsData = [
     },
 
     {
-        id: 7,
+        id: 8,
         title: "Fylo",
         description: "Landing page for a cloud storage service.",
         techUsed: "HTML5/CSS3, Bootstrap",
