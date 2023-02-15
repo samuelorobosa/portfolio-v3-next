@@ -11,8 +11,8 @@ export const navData = [
     },
     {
         id: 1,
-        name: 'Projects',
-        url: '/projects',
+        name: 'Work',
+        url: '/work',
         icon: <IoBriefcaseOutline/>
     },
     {
