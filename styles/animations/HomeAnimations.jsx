@@ -6,8 +6,8 @@ export const container = {
         opacity: 1,
         transition: {
             type: "spring",
-            delayChildren: 0.2,
-            staggerChildren: 0.07
+            delayChildren: 0.1,
+            staggerChildren: 0.04
         }
     }
 }
@@ -19,6 +19,6 @@ export const textItem = {
     },
     visible: {
         height: 'auto',
-        transition: { type: "tween", duration: 0.4 }
+        transition: { type: "tween", duration: 0.2 }
     }
 }
