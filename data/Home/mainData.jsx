@@ -59,7 +59,7 @@ export const subMainData = [
     },
     {
         id: 9,
-        content: 'on the web',
+        content: 'on the web.',
         className: ''
     },
     {
@@ -162,12 +162,12 @@ export const bottomMainData = [
     },
     {
         id: 9,
-        content: 'using Laravel',
+        content: 'using Node JS',
         className: ''
     },
     {
         id: 30,
-        content: 'and PHP',
+        content: 'and SQL',
         className: ''
     }
 ]
