@@ -1,13 +1,13 @@
 import {useContext, useEffect} from "react";
 import NavigationContext from "../../context/NavigationContext/NavigationContext";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
-import {workData} from "../../data/Work/workData";
+import {projectsData} from "../../data/Projects/projectsData";
 import {useRouter} from "next/router";
 import Head from "next/head";
 import {motion} from "framer-motion";
 import styles from '../../styles/Work.module.scss'
 
-const Work = () => {
+const Projects = () => {
     const location = useRouter().pathname
     const{pathName, dispatch} = useContext(NavigationContext);
 
@@ -36,7 +36,7 @@ const Work = () => {
                         </h1>
 
                         <div className={`mt-5 w-11/12 sm:w-3/4 mx-auto ${styles.pv3__projectsContainer}`}>
-                            {workData.map(({id,title,description,techUsed,gitHubLink,liveLink})=>{
+                            {projectsData.map(({id,title,description,techUsed,gitHubLink,liveLink})=>{
                                 return (
                                     <div key={id} className={`flex flex-col justify-between ${styles.projectDiv} transition duration-500 p-4 rounded my-3.5 text-left bg-secondary-text-color main-text-color`}>
                                         <h1 className="font-semibold flex duration-500 justify-end text-xl">
@@ -58,4 +58,4 @@ const Work = () => {
     )
 }
 
-export default Work;
+export default Projects;
