@@ -65,5 +65,11 @@
       width: 100%;
     }
   }
+}
 
+.nav_links--focused{
+  color: var(--secondary-text-color);
+  &::after{
+    width: 100%;
+  }
 }

@@ -33,10 +33,11 @@ function Navbar (){
                                     return(
                                         <motion.li key={id}
                                             variants={listItem}
-                                            className={pathName === url ? 'hidden' : 'list-item'}>
+                                            // className={pathName === url ? 'hidden' : 'list-item'}
+                                        >
                                             <Link href={`${url}`}
                                                   aria-current="page">
-                                                <a className={`${styles.nav_links} after:transition-all after:delay-300 font-circular-medium`}>
+                                                <a className={`${styles.nav_links} ${pathName === url ? styles['nav_links--focused'] : ''} after:transition-all after:delay-300 font-circular-medium`}>
                                                     {name}
                                                 </a>
                                             </Link>
