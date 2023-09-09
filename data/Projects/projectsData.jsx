@@ -1,11 +1,11 @@
 export const projectsData = [
     {
         id: 1,
-        title: "AcademyStack",
-        description: "A private boutique of dedicated artisans.",
-        techUsed: "Vanilla JavaScript, SCSS, Blade Templates, Webpack",
+        title: "TaskScribe",
+        description: "A CLI Tool for Task Management",
+        techUsed: "Nodejs + Commanderjs",
         gitHubLink: null,
-        liveLink: "https://academystack.com/",
+        liveLink: "https://www.npmjs.com/package/taskscribe",
     },
     {
         id: 2,
@@ -29,7 +29,7 @@ export const projectsData = [
         description: "My Personal Website.",
         techUsed: "NextJS, TailwindCSS, Framer Motion",
         gitHubLink: "https://github.com/samuelorobosa/portfolio-v3",
-        liveLink: "https://samuelorobosa.xyz/",
+        liveLink: "https://samuelorobosa.vercel.app/",
     },
     {
         id: 5,
