@@ -39,7 +39,7 @@ export const subMainData = [
     },
     {
         id: 5,
-        content: 'frontend developer',
+        content: 'software developer',
         className: 'inline-block bg-secondary-text-color text-white rounded  px-1.5'
     },
     {
