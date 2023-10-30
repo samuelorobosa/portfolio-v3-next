@@ -27,7 +27,7 @@ export const projectsData = [
         id: 4,
         title: "Cordum",
         description: "Cordum is a web application that enables user take notes in rich text and label them according to their respective categories.",
-        techUsed: "ReactJs + React Query, TypeScript",
+        techUsed: "ReactJs + React Query, TypeScript, Laravel",
         gitHubLink: "https://github.com/samuelorobosa/cordum-frontend",
         liveLink: "https://cordum.vercel.app/",
     },
