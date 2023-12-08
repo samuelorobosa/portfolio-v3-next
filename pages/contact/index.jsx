@@ -36,16 +36,13 @@ export default function Contact (){
                         {`Let's`} Have A Talk
                     </h2>
                     <p className="text-xl md:w-1/2 sm:w-5/6 mx-auto text-center mt-12">
-                        Hi, Samuel here, {`I'd`} love to hear from you -
-                        whether {`you're`} looking to collaborate, you have a question,
-                        or you think we might be a good fit for each other, send an
-                        <span className="inline-block bg-secondary-text-color text-white rounded mx-1.5 px-1.5">email</span>
-                        across. {`I'll`} get back to you ASAP.
+                        I'm always open to connecting and exploring new opportunities.
+                        Whether you're interested in collaborating, have a question, or simply want to say hello, please click the button below to send me a mail directly.
                     </p>
                 </div>
                 <div className="text-center text-xl py-4 px-20 mt-6">
-                    <Link href={'mailto:amagbakhensamuel@email.com'}>
-                        <a className="px-3 transition duration-500 hover:bg-blue-600 hover:text-white border border-standout-color  py-4 px-20 stand-out-color rounded font-bold">
+                    <Link href={'mailto:orobosaamagbakhen@email.com'}>
+                        <a className="px-4 transition duration-500 text-base hover:bg-blue-600 hover:text-white border border-standout-color py-2.5 stand-out-color rounded font-bold">
                             Say Hello
                         </a>
                     </Link>
