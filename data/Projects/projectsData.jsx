@@ -17,11 +17,11 @@ export const projectsData = [
     },
     {
         id: 3,
-        title: "TaskScribe",
-        description: "A CLI Tool for Task Management",
-        techUsed: "Nodejs + Commanderjs",
-        gitHubLink: null,
-        liveLink: "https://www.npmjs.com/package/taskscribe",
+        title: "Fylo",
+        description: "Landing page for a cloud storage service.",
+        techUsed: "HTML5/CSS3, Bootstrap",
+        gitHubLink: "https://github.com/samuelorobosa/fyro",
+        liveLink: "https://fylo-landings.netlify.app/",
     },
     {
         id: 4,
@@ -41,11 +41,11 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "Fylo",
-        description: "Landing page for a cloud storage service.",
-        techUsed: "HTML5/CSS3, Bootstrap",
-        gitHubLink: "https://github.com/samuelorobosa/fyro",
-        liveLink: "https://fylo-landings.netlify.app/",
+        title: "TaskScribe",
+        description: "A CLI Tool for Task Management",
+        techUsed: "Nodejs + Commanderjs",
+        gitHubLink: null,
+        liveLink: "https://www.npmjs.com/package/taskscribe",
     },
 
 ]
