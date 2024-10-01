@@ -162,12 +162,12 @@ export const bottomMainData = [
     },
     {
         id: 9,
-        content: 'using Node JS',
+        content: 'using Node JS, Express, Nest JS',
         className: ''
     },
     {
         id: 30,
-        content: 'and SQL',
+        content: 'and SQL.',
         className: ''
     }
 ]
