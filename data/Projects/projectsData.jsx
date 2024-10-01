@@ -11,7 +11,7 @@ export const projectsData = [
         id: 2,
         title: "Phlo",
         description: "Phlo accelerates Synthetic Biology by connecting innovative projects with key stakeholders, driving research and collaboration.",
-        techUsed: "NextJS, TailwindCSS, TypeScript, NestJS",
+        techUsed: "NextJS, TailwindCSS, TypeScript, NestJS, ThirdWeb",
         gitHubLink: null,
         liveLink: "https://phlo.valleydao.bio/",
     },
