@@ -41,14 +41,6 @@ export const projectsData = [
     },
     {
         id: 6,
-        title: "WeShopAndShip",
-        description: "WeShopAndShip provides a cost-efficient platform that simplifies shopping from UK online stores.",
-        techUsed: "ReactJs, Redux, TypeScript, TailwindCSS",
-        gitHubLink: null,
-        liveLink: "https://weshopandship.co.uk/",
-    },
-    {
-        id: 7,
         title: "SamuelOrobosa",
         description: "My Personal Website.",
         techUsed: "NextJS, TailwindCSS, Framer Motion",
