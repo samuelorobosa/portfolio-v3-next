@@ -81,10 +81,6 @@ A modern, responsive portfolio built with Next.js, React, Tailwind CSS, and SCSS
 - Update articles source in `pages/articles/index.jsx`
 - Change social/contact info in `data/Contact/socialsData.js`
 
-## 🤝 Contributing
-
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
-
 ## 📬 Contact
 
 - [Portfolio](https://samuelorobosa.vercel.app/)

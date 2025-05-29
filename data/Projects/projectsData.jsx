@@ -17,6 +17,14 @@ export const projectsData = [
     },
     {
         id: 3,
+        title: "Spine DAO",
+        description: "Spine DAO accelerates spine health from diagnosis to recovery by uniting a global network of medical practitioners, researchers, patients, and innovators. Leveraging the power of AI and blockchain technology, Spine DAO is dedicated to improving outcomes in spine care and rapidly advancing spine research through collaborative innovation.",
+        techUsed: "NextJS, TailwindCSS, TypeScript, Ghost CMS",
+        gitHubLink: null,
+        liveLink: "https://www.spinedao.com/",
+    },
+    {
+        id: 4,
         title: "SEO Content AI",
         description: "SEO Content AI optimizes your strategy with high-quality, long-form content, boosting your search engine rankings and online presence using advanced AI solutions.",
         techUsed: "NextJS, TailwindCSS, TypeScript",
@@ -24,7 +32,7 @@ export const projectsData = [
         liveLink: "https://seocontent.ai/",
     },
     {
-        id: 4,
+        id: 5,
         title: "Niffy's Marketplace",
         description: "An NFT Landing Page.",
         techUsed: "ReactJs, TailwindCSS, SCSS, GSAP, Vercel",
@@ -32,7 +40,7 @@ export const projectsData = [
         liveLink: "https://niffys-marketplace.vercel.app/",
     },
     {
-        id: 5,
+        id: 6,
         title: "Fylo",
         description: "Landing page for a cloud storage service.",
         techUsed: "HTML5/CSS3, Bootstrap",
@@ -40,7 +48,7 @@ export const projectsData = [
         liveLink: "https://fylo-landings.netlify.app/",
     },
     {
-        id: 6,
+        id: 7,
         title: "SamuelOrobosa",
         description: "My Personal Website.",
         techUsed: "NextJS, TailwindCSS, Framer Motion",
