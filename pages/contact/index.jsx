@@ -49,9 +49,9 @@ export default function Contact (){
                 </div>
                 <div className="mt-3 md:mt-auto mb-14 flex justify-center flex-col md:flex-row md:justify-between items-center">
                     <p className={`text-2xl font-bold flex my-3`}>Connect with me online</p>
-                    <div className="flex flex-nowrap font-extrabold my-3">
+                    <div className="flex flex-wrap font-extrabold my-3">
                         {socialsData.map(social => (
-                            <a className="px-3 flex flex-nowrap items-center hover-secondary-text-color transition duration-500 ease-in-out"
+                            <a className="px-3 flex flex-nowrap items-center hover-secondary-text-color transition duration-500 ease-in-out whitespace-nowrap"
                                   href={social.url}
                                   key={social.id}
                                   target="_blank"
