@@ -65,7 +65,7 @@ export default function Articles ({articles}) {
                                                 year: 'numeric'
                                             });
                                             return (
-                                                <div key={id} className={`flex flex-col justify-between w-full ${styles.articlesDiv} p-4 mx-1 rounded my-3.5 text-left bg-secondary-text-color main-text-color`}>
+                                                <div key={id} className={`flex flex-col justify-between w-full ${styles.articlesDiv} p-6 mx-1 rounded-lg my-3.5 text-left bg-dark-700 main-text-color shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-500`}>
                                                     <div>
                                                         <h1 className="font-semibold text-lg">{title}</h1>
                                                         <p className="text-sm">{convertedDate}</p>

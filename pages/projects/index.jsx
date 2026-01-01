@@ -38,7 +38,7 @@ const Projects = () => {
                         <div className={`mt-5 w-11/12 sm:w-3/4 mx-auto ${styles.pv3__projectsContainer}`}>
                             {projectsData.map(({id,title,description,techUsed,gitHubLink,liveLink})=>{
                                 return (
-                                    <div key={id} className={`flex flex-col justify-between ${styles.projectDiv} transition duration-500 p-4 rounded my-3.5 text-left bg-secondary-text-color main-text-color`}>
+                                    <div key={id} className={`flex flex-col justify-between ${styles.projectDiv} transition-all duration-500 p-6 rounded-lg my-3.5 text-left bg-dark-700 main-text-color shadow-card hover:shadow-card-hover hover:-translate-y-1 border border-transparent hover:border-blue-500/50`}>
                                         <h1 className="font-semibold flex duration-500 justify-end text-xl">
                                             {gitHubLink && <a target="_blank" rel="noreferrer" href={gitHubLink} className='transition-all hover-stand-out-color mx-2'><FiGithub/></a>}
                                             &nbsp;

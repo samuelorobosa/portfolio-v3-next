@@ -5,19 +5,46 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 body, html #__next{
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* width */
+/* Custom scrollbar with blue accent */
 ::-webkit-scrollbar {
     width: 3px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--standout-color);
     border-radius: 10px
+}
+
+/* Sleek card utilities */
+@layer components {
+    .card-sleek {
+        @apply bg-dark-700 rounded-lg shadow-card transition-all duration-300;
+    }
+    
+    .card-sleek:hover {
+        @apply shadow-card-hover transform -translate-y-1;
+    }
+    
+    .glass-effect {
+        @apply bg-dark-900/80 backdrop-blur-md border border-white/5;
+    }
+    
+    .border-glow {
+        @apply border border-transparent transition-all duration-300;
+    }
+    
+    .border-glow:hover {
+        @apply border-blue-500 shadow-glow-sm;
+    }
 }

@@ -1,19 +1,19 @@
 .pv3{
 &__HomeGradientText{
-     background: linear-gradient(to right, #FFF 20%, var(--standout-color) 40%, var(--standout-color) 60%, #FFF 80%);
+     background: linear-gradient(to right, #EAE8FF 20%, #2667FF 40%, #2667FF 60%, #EAE8FF 80%);
      background-size: 200% auto;
      color: #000;
      background-clip: inherit;
      text-fill-color: transparent;
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
-     animation: shine 1.5s linear infinite;
+     animation: shine 2s linear infinite;
  }
 
 }
 
 .pv3__viewMyProjectsIcon{
-    animation: bounce 1.2s linear infinite;
+    animation: bounce 1.2s ease-in-out infinite;
 }
 
 @keyframes bounce {

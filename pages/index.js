@@ -31,7 +31,7 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico"/>
           </Head>
           <div className="flex-1 flex flex-col justify-center container w-full mx-auto text-left md:text-center p-3">
-              <motion.p variants={container} initial="hidden" animate="visible" className="text-5xl font-black font-circular-black">
+              <motion.p variants={container} initial="hidden" animate="visible" className="text-5xl font-black">
                   {
                       mainData.map(({id, content, className}) => {
                           return(
@@ -71,8 +71,8 @@ export default function Home() {
               <Link href={'/projects'}>
                   <a className={`text-2xl hover-secondary-text-color inline-block
                   font-extrabold after:content-[''] after:w-20
-                  after:block after:h-0.5 after:bg-white ${styles.pv3__viewMyProjects}
-                  transition duration-500 ease-in-out
+                  after:block after:h-0.5 after:bg-blue-500 ${styles.pv3__viewMyProjects}
+                  transition-all duration-500 ease-in-out hover:shadow-glow-sm
                   after:transition-all after:delay-300`}>
                       View My Projects&nbsp;<BsArrowRight className={`inline ${styles.pv3__viewMyProjectsIcon}`}/>
                   </a>

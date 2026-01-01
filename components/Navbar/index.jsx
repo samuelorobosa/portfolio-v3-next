@@ -11,7 +11,7 @@ function Navbar (){
     const{pathName} = useContext(NavigationContext);
     return(
         <>
-            <nav className="container mx-auto bg-main-color py-10">
+            <nav className="container mx-auto bg-dark-900/90 backdrop-blur-md py-5 border-b border-white/5 mb-2">
                 <div className="flex flex-wrap justify-between items-center">
                     <Link href={'/'} className="flex items-center">
                         <motion.a variants={logoItem} initial="hidden" animate="show">
@@ -37,7 +37,7 @@ function Navbar (){
                                         >
                                             <Link href={`${url}`}
                                                   aria-current="page">
-                                                <a className={`${styles.nav_links} ${pathName === url ? styles['nav_links--focused'] : ''} after:transition-all after:delay-300 font-circular-medium`}>
+                                                <a className={`${styles.nav_links} ${pathName === url ? styles['nav_links--focused'] : ''} after:transition-all after:delay-300 font-medium`}>
                                                     {name}
                                                 </a>
                                             </Link>

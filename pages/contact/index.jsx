@@ -42,7 +42,7 @@ export default function Contact (){
                 </div>
                 <div className="text-center text-xl py-4 px-20 mt-6">
                     <Link href={'mailto:orobosaamagbakhen@email.com'}>
-                        <a className="px-4 transition duration-500 text-base hover:bg-blue-600 hover:text-white border border-standout-color py-2.5 stand-out-color rounded font-bold">
+                        <a className="px-6 py-3 transition-all duration-500 text-base font-semibold bg-blue-500 hover:bg-blue-600 text-white rounded-lg hover:shadow-glow-md border border-blue-500 hover:border-blue-400">
                             Say Hello
                         </a>
                     </Link>
