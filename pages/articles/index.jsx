@@ -2,7 +2,7 @@ import {useContext, useEffect} from "react";
 import NavigationContext from "../../context/NavigationContext/NavigationContext";
 import {useRouter} from "next/router";
 import Head from "next/head";
-import {FiExternalLink, FiClock} from "react-icons/fi";
+import {FiExternalLink} from "react-icons/fi";
 import {motion} from "framer-motion";
 import styles from "../../styles/Articles.module.scss"
 
@@ -93,46 +93,42 @@ export default function Articles ({articles}) {
                                     href={canonical_url}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className={`group flex flex-col ${styles.articlesDiv} rounded-lg bg-dark-700 main-text-color shadow-card hover:shadow-card-hover hover:-translate-y-2 border border-transparent hover:border-blue-500/50 transition-all duration-500 cursor-pointer`}>
+                                    className={`${styles.articlesDiv} group py-8 px-4 flex flex-col md:flex-row md:items-center justify-between gap-6 transition-all duration-300`}>
 
-                                    {/* Article Content */}
-                                    <div className="p-6 flex flex-col flex-grow">
-                                        {/* Date and Reading Time */}
-                                        <div className="flex items-center gap-3 text-xs secondary-text-color mb-3">
+                                    {/* Left Side: Title and Date */}
+                                    <div className="flex-grow">
+                                        <div className="flex items-center gap-3 text-xs secondary-text-color mb-2 font-mono uppercase tracking-widest">
                                             <span>{convertedDate}</span>
                                             {reading_time_minutes && (
                                                 <>
-                                                    <span>•</span>
+                                                    <span className="opacity-30">|</span>
                                                     <span className="flex items-center gap-1">
-                                                        <FiClock size={12} />
                                                         {reading_time_minutes} min read
                                                     </span>
                                                 </>
                                             )}
                                         </div>
-
-                                        {/* Title */}
-                                        <h2 className="font-semibold text-xl mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                                        <h2 className="font-bold text-2xl md:text-3xl group-hover:text-blue-400 transition-colors duration-300">
                                             {title}
                                         </h2>
+                                    </div>
 
-                                        {/* Tags */}
+                                    {/* Right Side: Tags and Link */}
+                                    <div className="flex flex-col md:items-end gap-4 min-w-[200px]">
                                         {tagArray.length > 0 && (
-                                            <div className="flex flex-wrap gap-2 mt-auto">
+                                            <div className="flex flex-wrap md:justify-end gap-2">
                                                 {tagArray.map((tag, index) => (
                                                     <span 
                                                         key={index}
-                                                        className="text-xs px-2 py-1 rounded bg-dark-900/50 border border-blue-500/20 text-blue-400 font-mono">
+                                                        className="text-[10px] px-2 py-0.5 rounded-full border border-blue-500/20 text-blue-400 font-mono">
                                                         #{tag}
                                                     </span>
                                                 ))}
                                             </div>
                                         )}
-
-                                        {/* Read More Link */}
-                                        <div className="flex items-center gap-2 mt-4 text-sm text-blue-400 group-hover:gap-3 transition-all duration-300">
-                                            <span>Read Article</span>
-                                            <FiExternalLink size={14} />
+                                        <div className="flex items-center gap-2 text-sm text-blue-400/70 group-hover:text-blue-400 transition-all duration-300">
+                                            <span className="font-semibold uppercase tracking-wider text-xs">Read More</span>
+                                            <FiExternalLink size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                         </div>
                                     </div>
                                 </motion.a>

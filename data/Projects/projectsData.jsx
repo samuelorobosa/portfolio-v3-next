@@ -59,5 +59,15 @@ export const projectsData = [
         gitHubLink: null,
         liveLink: "https://hirehuub.com",
     },
+    {
+        id: 7,
+        title: "Celeron by EN1",
+        description: "Pioneering Africa's electric mobility revolution through sustainable electric vehicle production. Celeron by EN1 is on a mission to supercharge the continent's journey toward a greener and more connected future, making high-performance electric transportation accessible to all.",
+        techStack: ["NextJS", "TailwindCSS", "TypeScript", "NestJS",],
+        image: "/images/projects/en1.png",
+        year: "2023",
+        gitHubLink: null,
+        liveLink: "https://en1.com",
+    },
 
 ]

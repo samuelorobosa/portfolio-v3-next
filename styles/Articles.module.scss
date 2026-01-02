@@ -1,31 +1,44 @@
 .pv3__articlesContainer {
-  display: grid;
-  justify-items: center;
-  justify-content: center;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .articlesDiv {
   display: flex;
-  flex-direction: column;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 1;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
-}
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
 
-/* Tablet: 2 columns */
-@media (max-width: 1024px) {
-  .pv3__articlesContainer {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+  &:hover {
+    background: rgba(38, 103, 255, 0.03);
+    
+    &::after {
+      transform: translateX(0);
+    }
+  }
+
+  /* Subtle accent line on hover */
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #2667FF;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
   }
 }
 
-/* Mobile: 1 column */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .pv3__articlesContainer {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .articlesDiv {
+    padding: 2rem 1rem;
+    flex-direction: column;
   }
 }
