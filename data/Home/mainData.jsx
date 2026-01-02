@@ -19,7 +19,7 @@ export const mainData = [
 export const subMainData = [
     {
         id: 3,
-        content: 'A software developer building modern web applications across the full stack. I craft elegant frontends with React and Next.js, develop robust backends with Node.js and NestJS, and integrate AI-powered features to create intelligent, scalable solutions.',
+        content: 'A software developer experienced across frontend and backend development, focused on building well-designed user interfaces, dependable backend systems, and scalable, intelligent applications.',
         className: ''
     }
 ]
