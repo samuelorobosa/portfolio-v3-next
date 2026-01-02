@@ -62,12 +62,22 @@ export const projectsData = [
     {
         id: 7,
         title: "Celeron by EN1",
-        description: "Pioneering Africa's electric mobility revolution through sustainable electric vehicle production. Celeron by EN1 is on a mission to supercharge the continent's journey toward a greener and more connected future, making high-performance electric transportation accessible to all.",
+        description: "EN1 is a pioneering electric mobility brand leading Africa's transition to sustainable energy. We are supercharging the continent's journey toward a greener, more connected future through high-performance electric vehicle production.",
         techStack: ["NextJS", "TailwindCSS", "TypeScript", "NestJS",],
         image: "/images/projects/en1.png",
         year: "2023",
         gitHubLink: null,
         liveLink: "https://en1.com",
+    },
+     {
+        id: 8,
+        title: "KoboxFinance",
+        description: "Kobox is a next-generation financial platform putting the future of banking in your hands. It provides seamless access to traditional finance and cryptocurrency, allowing you to send, receive, and manage your money your way.",
+        techStack: ["NextJS", "TailwindCSS", "TypeScript"],
+        image: "/images/projects/kobox.png",
+        year: "2023",
+        gitHubLink: null,
+        liveLink: "https://www.koboxfinance.com/",
     },
 
 ]
