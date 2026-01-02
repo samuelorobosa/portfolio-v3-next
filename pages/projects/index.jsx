@@ -47,18 +47,6 @@ const Projects = () => {
         setTimeout(() => setSelectedProjectIndex(null), 300);
     };
 
-    const goToNext = () => {
-        setSelectedProjectIndex((prev) => 
-            prev === projectsData.length - 1 ? 0 : prev + 1
-        );
-    };
-
-    const goToPrevious = () => {
-        setSelectedProjectIndex((prev) => 
-            prev === 0 ? projectsData.length - 1 : prev - 1
-        );
-    };
-
     const handleImageLoad = (projectId) => {
         setImageLoadedStates(prev => ({
             ...prev,
@@ -137,10 +125,6 @@ const Projects = () => {
                 project={selectedProjectIndex !== null ? projectsData[selectedProjectIndex] : null}
                 isOpen={isModalOpen}
                 onClose={closeModal}
-                onNext={goToNext}
-                onPrevious={goToPrevious}
-                currentIndex={selectedProjectIndex !== null ? selectedProjectIndex : 0}
-                totalProjects={projectsData.length}
             />
         </>
     )
