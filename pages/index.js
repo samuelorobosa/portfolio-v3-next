@@ -68,8 +68,8 @@ export default function Home() {
   return (
     <>
           <Head>
-            <title>Samuel Amagbakhen - Frontend Developer</title>
-            <meta name="description" content="Frontend Developer specializing in React, Next.js, and TypeScript. Building modern, scalable web applications." />
+            <title>Samuel Amagbakhen - Software Developer</title>
+            <meta name="description" content="Software Developer specializing in React, Next.js, and TypeScript. Building modern, scalable web applications." />
             <link rel="icon" href="/favicon.ico"/>
           </Head>
           

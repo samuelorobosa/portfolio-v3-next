@@ -69,7 +69,7 @@ const Projects = () => {
     return(
         <>
             <Head>
-                <title>Projects|Samuel - Frontend Developer</title>
+                <title>Projects | Samuel - Software Developer</title>
             </Head>
             <motion.div
                 initial={{opacity: 0, y: 100}}
