@@ -2,7 +2,7 @@ import {useContext, useEffect} from "react";
 import NavigationContext from "../../context/NavigationContext/NavigationContext";
 import {useRouter} from "next/router";
 import Head from "next/head";
-import {BsFillEyeFill} from "react-icons/bs";
+import {FiExternalLink, FiClock} from "react-icons/fi";
 import {motion} from "framer-motion";
 import styles from "../../styles/Articles.module.scss"
 
@@ -36,10 +36,26 @@ export default function Articles ({articles}) {
             payload: location
         })
     },[dispatch, location])
+
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const item = {
+        hidden: { opacity: 0, y: 20 },
+        show: { opacity: 1, y: 0 }
+    };
+
     return(
         <>
             <Head>
-                <title>Articles | Samuel - Frontend Developer</title>
+                <title>Articles | Samuel - Software Developer</title>
             </Head>
             <motion.div
                 initial={{opacity: 0, y: 100}}
@@ -54,35 +70,76 @@ export default function Articles ({articles}) {
                     My Articles
                 </h1>
 
-                <div className={`mt-5 w-11/12 sm:w-3/4 mx-auto ${styles.pv3__articlesContainer}`}>
-                        {
-                                <>
-                                    {
-                                        articles.map(({id,title,published_at,tags,canonical_url})=>{
-                                            const convertedDate = new Date(published_at).toLocaleDateString(undefined,{
-                                                day: 'numeric',
-                                                month: 'long',
-                                                year: 'numeric'
-                                            });
-                                            return (
-                                                <div key={id} className={`flex flex-col justify-between w-full ${styles.articlesDiv} p-6 mx-1 rounded-lg my-3.5 text-left bg-dark-700 main-text-color shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-500`}>
-                                                    <div>
-                                                        <h1 className="font-semibold text-lg">{title}</h1>
-                                                        <p className="text-sm">{convertedDate}</p>
-                                                    </div>
+                <motion.div 
+                    variants={container}
+                    initial="hidden"
+                    animate="show"
+                    className={`mt-10 w-11/12 lg:w-5/6 mx-auto ${styles.pv3__articlesContainer}`}>
+                    {
+                        articles.map(({id, title, published_at, tags, canonical_url, reading_time_minutes, cover_image}) => {
+                            const convertedDate = new Date(published_at).toLocaleDateString(undefined,{
+                                day: 'numeric',
+                                month: 'long',
+                                year: 'numeric'
+                            });
+                            
+                            // Split tags into array
+                            const tagArray = tags ? tags.split(',').map(tag => tag.trim()).slice(0, 3) : [];
+                            
+                            return (
+                                <motion.a 
+                                    variants={item}
+                                    key={id}
+                                    href={canonical_url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={`group flex flex-col ${styles.articlesDiv} rounded-lg bg-dark-700 main-text-color shadow-card hover:shadow-card-hover hover:-translate-y-2 border border-transparent hover:border-blue-500/50 transition-all duration-500 cursor-pointer`}>
 
-                                                    <div>
-                                                        <a className="hover-stand-out-color inline transition-all duration-500 items-center" href={canonical_url}><BsFillEyeFill className="inline-block"/> View Post</a>
-                                                        <p className="text-sm secondary-text-color-lighter">#{tags}.</p>
-                                                    </div>
-                                                </div>
+                                    {/* Article Content */}
+                                    <div className="p-6 flex flex-col flex-grow">
+                                        {/* Date and Reading Time */}
+                                        <div className="flex items-center gap-3 text-xs secondary-text-color mb-3">
+                                            <span>{convertedDate}</span>
+                                            {reading_time_minutes && (
+                                                <>
+                                                    <span>•</span>
+                                                    <span className="flex items-center gap-1">
+                                                        <FiClock size={12} />
+                                                        {reading_time_minutes} min read
+                                                    </span>
+                                                </>
+                                            )}
+                                        </div>
 
-                                            )
-                                        })
-                                    }
-                                </>
-                        }
-                    </div>
+                                        {/* Title */}
+                                        <h2 className="font-semibold text-xl mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                                            {title}
+                                        </h2>
+
+                                        {/* Tags */}
+                                        {tagArray.length > 0 && (
+                                            <div className="flex flex-wrap gap-2 mt-auto">
+                                                {tagArray.map((tag, index) => (
+                                                    <span 
+                                                        key={index}
+                                                        className="text-xs px-2 py-1 rounded bg-dark-900/50 border border-blue-500/20 text-blue-400 font-mono">
+                                                        #{tag}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        )}
+
+                                        {/* Read More Link */}
+                                        <div className="flex items-center gap-2 mt-4 text-sm text-blue-400 group-hover:gap-3 transition-all duration-300">
+                                            <span>Read Article</span>
+                                            <FiExternalLink size={14} />
+                                        </div>
+                                    </div>
+                                </motion.a>
+                            )
+                        })
+                    }
+                </motion.div>
 
                 <div className="pb-24 sm:pb-0"></div>
             </motion.div>

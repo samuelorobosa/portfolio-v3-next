@@ -1,33 +1,31 @@
-.pv3__articlesContainer{
+.pv3__articlesContainer {
   display: grid;
   justify-items: center;
   justify-content: center;
-  grid-template-columns: repeat(2,1fr);
-  column-gap: 1rem;
-}
-
-.articlesDiv{
-  min-height: 250px;
-  transition: all 0.5s;
-  opacity: 1;
-}
-
-.articlesDivContainer {
-  display: grid;
-  column-gap: 0.6rem;
   grid-template-columns: repeat(3, 1fr);
-  width: 100%;
-  justify-items: center;
+  gap: 2rem;
 }
 
-@media(hover: hover){
-  .articlesDiv:hover{
-    transform: scale(1.02);
+.articlesDiv {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  text-decoration: none;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+  .pv3__articlesContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 }
 
+/* Mobile: 1 column */
 @media (max-width: 768px) {
-  .pv3__articlesContainer{
-    grid-template-columns: 100%;
+  .pv3__articlesContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }

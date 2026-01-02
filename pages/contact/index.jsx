@@ -4,7 +4,7 @@ import NavigationContext from "../../context/NavigationContext/NavigationContext
 import Head from "next/head";
 import Link from "next/link";
 import {socialsData} from "../../data/Contact/socialsData";
-import {BsArrowUpRight} from "react-icons/bs";
+import {FiMail, FiArrowUpRight} from "react-icons/fi";
 import {motion} from "framer-motion";
 
 export default function Contact (){
@@ -17,52 +17,99 @@ export default function Contact (){
             payload: location
         })
     },[dispatch, location])
+
+    const container = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.3
+            }
+        }
+    };
+
+    const item = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5
+            }
+        }
+    };
+
     return(
         <>
             <Head>
-                <title>Contact | Samuel - Frontend Developer</title>
+                <title>Contact | Samuel - Software Developer</title>
             </Head>
             <motion.div
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}
+                initial={{opacity: 0, y: 100}}
+                animate={{opacity: 1, y: 0}}
                 transition={{
                     duration: 0.7,
                 }}
-                className="container mx-auto flex flex-col h-5/6 justify-between">
-                <div>
-                    <h1 className="font-semibold text-2xl  text-center secondary-text-color mb-5">{pathName}</h1>
-                    <h2 className="text-4xl font-extrabold text-center">
+                className="container mx-auto flex flex-col justify-center min-h-[70vh] max-w-3xl px-4">
+                
+                {/* Header */}
+                <div className="mb-12">
+                    <h1 className="font-semibold text-2xl text-center secondary-text-color mb-5">{pathName}</h1>
+                    <h2 className="text-4xl md:text-5xl font-bold text-center">
                         <span className="stand-out-color text-base inline-block mr-3">05.</span>
-                        {`Let's`} Have A Talk
+                        {`Let's`} Connect
                     </h2>
-                    <p className="text-xl md:w-1/2 sm:w-5/6 mx-auto text-center mt-12">
-                        I'm always open to connecting and exploring new opportunities.
-                        Whether you're interested in collaborating, have a question, or simply want to say hello, please click the button below to send me a mail directly.
-                    </p>
                 </div>
-                <div className="text-center text-xl py-4 px-20 mt-6">
-                    <Link href={'mailto:orobosaamagbakhen@email.com'}>
-                        <a className="px-6 py-3 transition-all duration-500 text-base font-semibold bg-blue-500 hover:bg-blue-600 text-white rounded-lg hover:shadow-glow-md border border-blue-500 hover:border-blue-400">
-                            Say Hello
+
+                {/* Description */}
+                <motion.p 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    className="text-lg md:text-xl leading-relaxed secondary-text-color-lighter text-center mb-12">
+                    I'm always open to new opportunities, collaborations, and conversations. Whether you have a project in mind or just want to chat about tech, feel free to reach out.
+                </motion.p>
+
+                {/* Email CTA */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.6, duration: 0.6 }}
+                    className="text-center mb-16">
+                    <Link href={'mailto:amagbakhensamuel@gmail.com'}>
+                        <a className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:scale-105">
+                            <FiMail size={20} />
+                            Send me an email
                         </a>
                     </Link>
-                </div>
-                <div className="mt-3 md:mt-auto mb-14 flex justify-center flex-col md:flex-row md:justify-between items-center">
-                    <p className={`text-2xl font-bold flex my-3`}>Connect with me online</p>
-                    <div className="flex flex-wrap font-extrabold my-3">
-                        {socialsData.map(social => (
-                            <a className="px-3 flex flex-nowrap items-center hover-secondary-text-color transition duration-500 ease-in-out whitespace-nowrap"
-                                  href={social.url}
-                                  key={social.id}
-                                  target="_blank"
-                                  rel="noopener noreferrer">
-                                {social.icon}&nbsp;&nbsp;{social.name} &nbsp;
-                                <BsArrowUpRight className="inline"/>
-                            </a>
-                        ))
-                        }
+                </motion.div>
+
+                {/* Social Links */}
+                <motion.div
+                    variants={container}
+                    initial="hidden"
+                    animate="visible"
+                    className="border-t border-white/5 pt-8">
+                    <p className="text-sm secondary-text-color text-center mb-6">Or connect with me on</p>
+                    <div className="flex flex-wrap justify-center gap-6">
+                        {socialsData.map((social) => (
+                            <motion.a
+                                variants={item}
+                                key={social.id}
+                                href={social.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group flex items-center gap-2 text-base secondary-text-color hover-stand-out-color transition-colors duration-300">
+                                <span className="text-lg">{social.icon}</span>
+                                <span>{social.name}</span>
+                                <FiArrowUpRight className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={14} />
+                            </motion.a>
+                        ))}
                     </div>
-                </div>
+                </motion.div>
+
+                <div className="pb-24 sm:pb-0"></div>
             </motion.div>
         </>
     )
