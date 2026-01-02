@@ -99,12 +99,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                                     <div className="mb-6">
                                         <div className="flex items-center gap-3 text-blue-400 font-mono text-xs uppercase tracking-widest mb-2">
                                             <span>Project Showcase</span>
-                                            {project.year && (
-                                                <>
-                                                    <span className="opacity-30">•</span>
-                                                    <span>{project.year}</span>
-                                                </>
-                                            )}
                                         </div>
                                         <h2 className="text-3xl md:text-4xl font-bold main-text-color tracking-tight">{project.title}</h2>
                                     </div>
