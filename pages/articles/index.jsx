@@ -137,7 +137,7 @@ export default function Articles ({articles}) {
                     }
                 </motion.div>
 
-                <div className="pb-24 sm:pb-0"></div>
+                <div className="pb-32 sm:pb-0"></div>
             </motion.div>
         </>
     )

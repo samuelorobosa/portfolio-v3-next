@@ -51,11 +51,11 @@ export default function Contact (){
                 transition={{
                     duration: 0.7,
                 }}
-                className="container mx-auto flex flex-col justify-center min-h-[70vh] max-w-3xl px-4">
+                className="container mx-auto flex flex-col md:justify-center py-12 md:py-0 md:min-h-[70vh] max-w-3xl px-6">
                 
                 {/* Header */}
-                <div className="mb-12">
-                    <h1 className="font-semibold text-2xl text-center secondary-text-color mb-5">{pathName}</h1>
+                <div className="mb-10">
+                    <h1 className="font-semibold text-xl md:text-2xl text-center secondary-text-color mb-3">{pathName}</h1>
                     <h2 className="text-4xl md:text-5xl font-bold text-center">
                         <span className="stand-out-color text-base inline-block mr-3">05.</span>
                         {`Let's`} Connect
@@ -67,7 +67,7 @@ export default function Contact (){
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
-                    className="text-lg md:text-xl leading-relaxed secondary-text-color-lighter text-center mb-12">
+                    className="text-lg md:text-xl leading-relaxed secondary-text-color-lighter text-center mb-10">
                     I'm always open to new opportunities, collaborations, and conversations. Whether you have a project in mind or just want to chat about tech, feel free to reach out.
                 </motion.p>
 
@@ -76,7 +76,7 @@ export default function Contact (){
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6, duration: 0.6 }}
-                    className="text-center mb-16">
+                    className="text-center mb-12">
                     <Link href={'mailto:amagbakhensamuel@gmail.com'}>
                         <a className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:scale-105">
                             <FiMail size={20} />
@@ -91,8 +91,8 @@ export default function Contact (){
                     initial="hidden"
                     animate="visible"
                     className="border-t border-white/5 pt-8">
-                    <p className="text-sm secondary-text-color text-center mb-6">Or connect with me on</p>
-                    <div className="flex flex-wrap justify-center gap-6">
+                    <p className="text-sm secondary-text-color text-center mb-6 font-mono uppercase tracking-widest">Or connect with me on</p>
+                    <div className="flex flex-wrap justify-center gap-6 md:gap-8">
                         {socialsData.map((social) => (
                             <motion.a
                                 variants={item}
@@ -101,15 +101,15 @@ export default function Contact (){
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group flex items-center gap-2 text-base secondary-text-color hover-stand-out-color transition-colors duration-300">
-                                <span className="text-lg">{social.icon}</span>
-                                <span>{social.name}</span>
-                                <FiArrowUpRight className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={14} />
+                                <span className="text-xl">{social.icon}</span>
+                                <span className="font-medium">{social.name}</span>
+                                <FiArrowUpRight className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-1 group-hover:translate-y-0 transition-transform" size={14} />
                             </motion.a>
                         ))}
                     </div>
                 </motion.div>
 
-                <div className="pb-24 sm:pb-0"></div>
+                <div className="pb-32 sm:pb-0"></div>
             </motion.div>
         </>
     )
