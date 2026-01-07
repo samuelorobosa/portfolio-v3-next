@@ -47,13 +47,13 @@ export const socialLinks = [
     {
         id: 2,
         name: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/samuelorobosa',
+        url: 'https://www.linkedin.com/in/samuel-amagbakhen',
         icon: 'linkedin'
     },
     {
         id: 3,
         name: 'Twitter',
-        url: 'https://twitter.com/samuelorobosa',
+        url: 'https://twitter.com/Samuel_Orobosa',
         icon: 'twitter'
     }
 ]
