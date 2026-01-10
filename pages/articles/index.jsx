@@ -2,14 +2,19 @@ import {useContext, useEffect} from "react";
 import NavigationContext from "../../context/NavigationContext/NavigationContext";
 import {useRouter} from "next/router";
 import Head from "next/head";
+import Link from "next/link";
 import {FiExternalLink} from "react-icons/fi";
 import {motion} from "framer-motion";
 import styles from "../../styles/Articles.module.scss"
 
 
-export  const getAllArticles = async () => {
+export const getAllArticles = async () => {
     try {
-        const res = await fetch(`https://dev.to/api/articles?username=samuelorobosa`);
+        const res = await fetch("https://dev.to/api/articles/me", {
+            headers: {
+                "api-key": process.env.DEV_TO_API_KEY
+            }
+        });
         return await res.json();
     } catch (e) {
         console.log(`Could not get all articles ${e}`)
@@ -76,62 +81,68 @@ export default function Articles ({articles}) {
                     animate="show"
                     className={`mt-10 w-11/12 lg:w-5/6 mx-auto ${styles.pv3__articlesContainer}`}>
                     {
-                        articles.map(({id, title, published_at, tags, canonical_url, reading_time_minutes, cover_image}) => {
+                        articles.map(({id, title, published_at, tag_list, canonical_url, reading_time_minutes, cover_image, public_reactions_count, slug}) => {
                             const convertedDate = new Date(published_at).toLocaleDateString(undefined,{
                                 day: 'numeric',
                                 month: 'long',
                                 year: 'numeric'
                             });
                             
-                            // Split tags into array
-                            const tagArray = tags ? tags.split(',').map(tag => tag.trim()).slice(0, 3) : [];
+                            // tag_list is already an array from the /me endpoint
+                            const tagArray = tag_list ? tag_list.slice(0, 3) : [];
                             
                             return (
-                                <motion.a 
-                                    variants={item}
-                                    key={id}
-                                    href={canonical_url}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className={`${styles.articlesDiv} group py-8 px-4 flex flex-col md:flex-row md:items-center justify-between gap-6 transition-all duration-300`}>
+                                <Link href={`/articles/${slug}`} key={id}>
+                                    <motion.div 
+                                        variants={item}
+                                        className={`${styles.articlesDiv} group py-8 px-4 flex flex-col md:flex-row md:items-center justify-between gap-6 transition-all duration-300 cursor-pointer`}>
 
-                                    {/* Left Side: Title and Date */}
-                                    <div className="flex-grow">
-                                        <div className="flex items-center gap-3 text-xs secondary-text-color mb-2 font-mono uppercase tracking-widest">
-                                            <span>{convertedDate}</span>
-                                            {reading_time_minutes && (
-                                                <>
-                                                    <span className="opacity-30">|</span>
-                                                    <span className="flex items-center gap-1">
-                                                        {reading_time_minutes} min read
-                                                    </span>
-                                                </>
+                                        {/* Left Side: Title and Date */}
+                                        <div className="flex-grow">
+                                            <div className="flex items-center gap-3 text-xs secondary-text-color mb-2 font-mono uppercase tracking-widest">
+                                                <span>{convertedDate}</span>
+                                                {reading_time_minutes && (
+                                                     <>
+                                                         <span className="opacity-30">|</span>
+                                                         <span className="flex items-center gap-1">
+                                                             {reading_time_minutes} min read
+                                                         </span>
+                                                     </>
+                                                 )}
+                                                 {public_reactions_count > 0 && (
+                                                     <>
+                                                         <span className="opacity-30">|</span>
+                                                         <span className="flex items-center gap-1">
+                                                             {public_reactions_count} reactions
+                                                         </span>
+                                                     </>
+                                                 )}
+                                             </div>
+                                             <h2 className="font-bold text-2xl md:text-3xl group-hover:text-blue-400 transition-colors duration-300">
+                                                 {title}
+                                             </h2>
+                                        </div>
+
+                                        {/* Right Side: Tags and Link */}
+                                        <div className="flex flex-col md:items-end gap-4 min-w-[200px]">
+                                            {tagArray.length > 0 && (
+                                                <div className="flex flex-wrap md:justify-end gap-2">
+                                                    {tagArray.map((tag, index) => (
+                                                        <span 
+                                                            key={index}
+                                                            className="text-[10px] px-2 py-0.5 rounded-full border border-blue-500/20 text-blue-400 font-mono">
+                                                            #{tag}
+                                                        </span>
+                                                    ))}
+                                                </div>
                                             )}
-                                        </div>
-                                        <h2 className="font-bold text-2xl md:text-3xl group-hover:text-blue-400 transition-colors duration-300">
-                                            {title}
-                                        </h2>
-                                    </div>
-
-                                    {/* Right Side: Tags and Link */}
-                                    <div className="flex flex-col md:items-end gap-4 min-w-[200px]">
-                                        {tagArray.length > 0 && (
-                                            <div className="flex flex-wrap md:justify-end gap-2">
-                                                {tagArray.map((tag, index) => (
-                                                    <span 
-                                                        key={index}
-                                                        className="text-[10px] px-2 py-0.5 rounded-full border border-blue-500/20 text-blue-400 font-mono">
-                                                        #{tag}
-                                                    </span>
-                                                ))}
+                                            <div className="flex items-center gap-2 text-sm text-blue-400/70 group-hover:text-blue-400 transition-all duration-300">
+                                                <span className="font-semibold uppercase tracking-wider text-xs">Read Article</span>
+                                                <FiExternalLink size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                             </div>
-                                        )}
-                                        <div className="flex items-center gap-2 text-sm text-blue-400/70 group-hover:text-blue-400 transition-all duration-300">
-                                            <span className="font-semibold uppercase tracking-wider text-xs">Read More</span>
-                                            <FiExternalLink size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                         </div>
-                                    </div>
-                                </motion.a>
+                                    </motion.div>
+                                </Link>
                             )
                         })
                     }

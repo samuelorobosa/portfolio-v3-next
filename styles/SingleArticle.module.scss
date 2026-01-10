@@ -1,0 +1,135 @@
+.articleWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2667FF;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    gap: 0.75rem;
+    opacity: 0.8;
+  }
+}
+
+.articleHeader {
+  margin-bottom: 3rem;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.7) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+}
+
+.content {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+  font-size: 1.125rem;
+
+  h1, h2, h3, h4 {
+    color: #fff;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  a {
+    color: #2667FF;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    &:hover { color: lighten(#2667FF, 10%); }
+  }
+
+  ul, ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    li { margin-bottom: 0.5rem; }
+  }
+
+  blockquote {
+    border-left: 4px solid #2667FF;
+    padding: 1rem 1.5rem;
+    background: rgba(38, 103, 255, 0.05);
+    border-radius: 0 8px 8px 0;
+    margin: 2rem 0;
+    font-style: italic;
+  }
+
+  pre {
+    background: #0d1117;
+    padding: 1.5rem;
+    border-radius: 12px;
+    overflow-x: auto;
+    margin: 2rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+  }
+
+  pre code {
+    background: transparent;
+    padding: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 2.5rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .articleWrapper {
+    padding: 2rem 1rem;
+  }
+  
+  .articleHeader h1 {
+    font-size: 2.25rem;
+  }
+}
